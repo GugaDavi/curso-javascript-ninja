@@ -123,7 +123,7 @@ var entrarPessoas = function (x) {
         var limite = carro.assentos - carro.quantidadePessoas;
         return 'So cabem mais ' + limite + (limite > 1 ? ' pessoas!' : ' pessoa!');
     } else {
-        return 'Carro está cheio';
+        return 'Carro está cheio'; 
 }
 
 /*
