@@ -28,7 +28,15 @@ isTruthy(false);
 /*
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
 */
-isTruthy('a', 1, true, 1.5, function(){}, 'Gustavo', 25, 1.73, function () { return 'Gordinho' })
+isTruthy('a');
+isTruthy(1);
+isTruthy(true);
+isTruthy(1.5);
+isTruthy([]);
+isTruthy('Gustavo');
+isTruthy(25);
+isTruthy(1.73);
+isTruthy(function () { return 'Gordinho' });
 
 /*
 Declare uma variável chamada `carro`, atribuindo à ela um objeto com as
@@ -43,15 +51,15 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `quantidadePessoas` - Number - zero por padrão
 */
 var carro = {
-    marca: 'Ford';
-    modelo: 'Fiesta';
-    placa: 'OHC 0020';
-    ano: 2012;
-    cor: 'vermelho';
-    quantasPortas: 4;
-    assentos: 5;
-    quantidadePessoas: 0;
-}
+    marca: 'Ford',
+    modelo: 'Fiesta',
+    placa: 'OHC 0020',
+    ano: 2012,
+    cor: 'vermelho',
+    quantasPortas: 4,
+    assentos: 5,
+    quantidadePessoas: 0    
+};
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
@@ -88,7 +96,7 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
 var obterMarcaModelo = function () {
-    return 'Esse carro é um ' + carro.marca + ' ' + carro.modelo;  
+    return 'Esse carro é um ' + obterMarca() + ' ' + obterModelo();  
 }
 
 /*
@@ -113,10 +121,9 @@ var entrarPessoas = function (x) {
         return 'Já temos ' + carro.quantidadePessoas + ' no carro!';
     } else if (x > carro.assentos - carro.quantidadePessoas){
         var limite = carro.assentos - carro.quantidadePessoas;
-        return 'So cabem mais ' + limite + limite > 1 ? ' pessoas!' : ' pessoa!';
+        return 'So cabem mais ' + limite + (limite > 1 ? ' pessoas!' : ' pessoa!');
     } else {
         return 'Carro está cheio';
-    
 }
 
 /*
