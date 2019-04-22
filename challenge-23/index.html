@@ -1,4 +1,5 @@
 <html>
+
 <head>
   <title>Calculadora</title>
 
@@ -42,7 +43,6 @@
       border: solid 1px #000;
       box-shadow: 1px 1px 1px #000;
     }
-
   </style>
 </head>
 
@@ -54,38 +54,56 @@
         <br />
 
         <div class="calculadora">
-          <input id="resultado" type="text" class="form-control resultado" placeholder="0" disabled="disabled" />
+          <input id="resultado" type="text" class="form-control resultado" placeholder="0"
+            disabled="disabled" />
 
           <div class="row">
-            <button onclick="calular('acao', 'c')" type="button" class="btn btn-success btn-lg clear font-weight-light">C</button>
-            <button onclick="calular('acao', '/')" type="button" class="btn btn-primary btn-lg font-weight-light">/</button>
-            <button onclick="calular('acao', '*')" type="button" class="btn btn-primary btn-lg font-weight-light">x</button>
+            <button onclick="calular('acao', 'c')" type="button"
+              class="btn btn-success btn-lg clear font-weight-light">C</button>
+            <button onclick="calular('acao', '/')" type="button"
+              class="btn btn-primary btn-lg font-weight-light">/</button>
+            <button onclick="calular('acao', '*')" type="button"
+              class="btn btn-primary btn-lg font-weight-light">x</button>
           </div>
 
           <div class="row">
-            <button onclick="calular('valor', 7)" type="button" class="btn btn-primary btn-lg font-weight-light">7</button>
-            <button onclick="calular('valor', 8)" type="button" class="btn btn-primary btn-lg font-weight-light">8</button>
-            <button onclick="calular('valor', 9)" type="button" class="btn btn-primary btn-lg font-weight-light">9</button>
-            <button onclick="calular('acao', '-')" type="button" class="btn btn-primary btn-lg font-weight-light">-</button>
+            <button onclick="calular('valor', 7)" type="button"
+              class="btn btn-primary btn-lg font-weight-light">7</button>
+            <button onclick="calular('valor', 8)" type="button"
+              class="btn btn-primary btn-lg font-weight-light">8</button>
+            <button onclick="calular('valor', 9)" type="button"
+              class="btn btn-primary btn-lg font-weight-light">9</button>
+            <button onclick="calular('acao', '-')" type="button"
+              class="btn btn-primary btn-lg font-weight-light">-</button>
           </div>
 
           <div class="row">
-            <button onclick="calular('valor', 4)" type="button" class="btn btn-primary ybtn-lg font-weight-light">4</button>
-            <button onclick="calular('valor', 5)" type="button" class="btn btn-primary ybtn-lg font-weight-light">5</button>
-            <button onclick="calular('valor', 6)" type="button" class="btn btn-primary btn-lg font-weight-light">6</button>
-            <button onclick="calular('acao', '+')" type="button" class="btn btn-primary btn-lg font-weight-light">+</button>
+            <button onclick="calular('valor', 4)" type="button"
+              class="btn btn-primary ybtn-lg font-weight-light">4</button>
+            <button onclick="calular('valor', 5)" type="button"
+              class="btn btn-primary ybtn-lg font-weight-light">5</button>
+            <button onclick="calular('valor', 6)" type="button"
+              class="btn btn-primary btn-lg font-weight-light">6</button>
+            <button onclick="calular('acao', '+')" type="button"
+              class="btn btn-primary btn-lg font-weight-light">+</button>
           </div>
 
           <div class="row">
-            <button onclick="calular('valor', 1)" type="button" class="btn btn-primary btn-lg font-weight-light">1</button>
-            <button onclick="calular('valor', 2)" type="button" class="btn btn-primary btn-lg font-weight-light">2</button>
-            <button onclick="calular('valor', 3)" type="button" class="btn btn-primary btn-lg font-weight-light">3</button>
-            <button onclick="calular('acao', '=')" type="button" class="btn btn-primary btn-lg enter">=</button>
+            <button onclick="calular('valor', 1)" type="button"
+              class="btn btn-primary btn-lg font-weight-light">1</button>
+            <button onclick="calular('valor', 2)" type="button"
+              class="btn btn-primary btn-lg font-weight-light">2</button>
+            <button onclick="calular('valor', 3)" type="button"
+              class="btn btn-primary btn-lg font-weight-light">3</button>
+            <button onclick="calular('acao', '=')" type="button"
+              class="btn btn-primary btn-lg enter">=</button>
           </div>
 
           <div class="row" style="margin-top: -60px">
-            <button onclick="calular('valor', 0)" type="button" class="btn btn-primary zero btn-lg font-weight-light">0</button>
-            <button onclick="calular('acao', '.')" type="button" class="btn btn-primary btn-lg font-weight-light">.</button>
+            <button onclick="calular('valor', 0)" type="button"
+              class="btn btn-primary zero btn-lg font-weight-light">0</button>
+            <button onclick="calular('acao', '.')" type="button"
+              class="btn btn-primary btn-lg font-weight-light">.</button>
           </div>
 
         </div>
@@ -102,13 +120,13 @@
           monitor.value = ''
         }
         if (valor === '+' || valor === '-' || valor === '*' || valor === '/' || valor === '.') {
-          if ( sinal === '' ) {
+          if (sinal === '') {
             sinal = valor;
           }
-          if ( (monitor.value.match(/[\+\-\/\*]$/)) && (sinal !== valor) ) {
-              monitor.value = monitor.value.slice(0, -1);
-            }
-          if ( !(monitor.value.match(/[\+\-\/\*]$/)) ) {
+          if ((monitor.value.match(/[\+\-\/\*]$/)) && (sinal !== valor)) {
+            monitor.value = monitor.value.slice(0, -1);
+          }
+          if (!(monitor.value.match(/[\+\-\/\*]$/))) {
             monitor.value += valor;
             sinal = valor;
           }
@@ -117,7 +135,7 @@
           var resultado_campo = monitor.value
           monitor.value = eval(resultado_campo)
         }
-      } else if (tipo === 'valor'){
+      } else if (tipo === 'valor') {
         monitor.value += valor
       }
     }
