@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cadastro de Notas</title>
+</head>
+<body>
+  <form>
+    <h1>Cadastro de Notas</h1>
+    Nome do Aluno:
+    <input type="text" data-js="aluno" disabled>
+    <br><br>
+    Selecione o aluno:
+    <select data-js="alunos">
+      <option></option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <h2>Notas:</h2>
+    <table>
+      <tr>
+        <th>1 Bi</th>
+        <th>2 Bi</th>
+        <th>3 Bi</th>
+        <th>4 Bi</th>
+        <th>Falta para Passar</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td><input type="text" data-js="1bi" size="5"></td>
+        <td><input type="text" data-js="2bi" size="5"></td>
+        <td><input type="text" data-js="3bi" size="5"></td>
+        <td><input type="text" data-js="4bi" size="5"></td>
+        <td><input type="text" data-js="faltante" disabled size="15"></td>
+        <td><input type="text" data-js="resultado" size="10" disabled></td>
+      </tr>
+    </table>
+    <br>
+    <button data-js="calcular">Calcular Média</button>
+
+
+  </form>
+  <script src="challenge-25.js"></script>
+
+
+</body>
+</html>
